@@ -1,0 +1,164 @@
+{
+  "standard": "C++11",
+  "examStructure": {
+    "singleChoice": { "count": 15, "scorePerQuestion": 2, "totalScore": 30 },
+    "judge": { "count": 10, "scorePerQuestion": 2, "totalScore": 20 },
+    "coding": { "count": 2, "scorePerQuestion": 25, "totalScore": 50 },
+    "totalScore": 100
+  },
+  "levels": [
+    {
+      "level": 1,
+      "name": "GESP C++ 一级",
+      "available": true,
+      "badgeText": "已上线",
+      "examDurationMinutes": 120,
+      "coreSummary": "计算机软硬件基础、Dev C++环境、基本数据类型(int/long long/float/double/char/bool)、cin/cout/scanf/printf、算术/关系/逻辑/自增自减/三目运算、顺序/if-else/switch分支、for/while/do-while单层循环及break/continue。",
+      "allowedKnowledgeBlocks": [
+        "计算机基础知识（软硬件组成、操作系统概念、发展历史）",
+        "集成开发环境（Dev C++ 创建、编辑、保存、编译、调试）",
+        "结构化程序设计（顺序结构、分支结构、循环结构）",
+        "程序的基本语句（cin、scanf、cout、printf、赋值、if、switch、for、while、do-while、break、continue）",
+        "程序的基本概念（标识符、关键字、常量、变量、命名规则、初始化、注释）",
+        "基本运算（算术运算 + - * / %、逻辑运算 && || !、关系运算、自增自减 ++ --、三目运算 ?:）",
+        "基本数据类型（int、long long、float、double、char、bool）"
+      ],
+      "forbiddenTopics": [
+        "一维数组与多维数组（三级/四级考点，一级严禁使用数组存储数据）",
+        "自定义函数封装（四级考点，一级所有逻辑必须写在 main 函数内）",
+        "字符串 string 类及其成员函数（三级考点）",
+        "常用数学库函数如 abs()、sqrt()、max()、min()（二级考点，一级需用 if-else 或三目运算符实现）",
+        "ASCII 编码转换与多层循环嵌套（二级考点）",
+        "指针与结构体 struct（四级考点）",
+        "STL 容器与 sort 排序函数（四级及以上考点）"
+      ]
+    },
+    {
+      "level": 2,
+      "name": "GESP C++ 二级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 120,
+      "coreSummary": "计算机存储(RAM/ROM/Cache)与网络、流程图、ASCII编码转换、强制/隐式类型转换、多层分支/循环嵌套、常用数学函数(abs/sqrt/max/min/rand)。",
+      "allowedKnowledgeBlocks": [
+        "计算机存储与网络（ROM/RAM/Cache、网络分类、TCP/IP与OSI模型、IP地址）",
+        "程序设计语言分类与流程图绘制",
+        "ASCII 编码识别与字符转换（空格:32, '0':48, 'A':65, 'a':97）",
+        "强制类型转换与隐式类型转换",
+        "多层分支结构与多层循环结构嵌套",
+        "数学函数（abs、sqrt、max、min、rand/srand）"
+      ],
+      "forbiddenTopics": [
+        "一维数组与字符串函数（三级考点）",
+        "自定义函数、指针、结构体（四级考点）"
+      ]
+    },
+    {
+      "level": 3,
+      "name": "GESP C++ 三级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 120,
+      "coreSummary": "原码/反码/补码、进制转换(二/八/十/十六)、位运算(& | ~ ^ << >>)、一维数组、字符串及其函数、枚举法与模拟法。",
+      "allowedKnowledgeBlocks": [
+        "数据编码（原码、反码、补码）",
+        "进制转换（二进制、八进制、十进制、十六进制）",
+        "位运算（&、|、~、^、<<、>>）",
+        "C++ 一维数组基本应用（不含变长数组）",
+        "字符串及其函数（大小写转换、搜索、分割、替换）",
+        "枚举算法与模拟算法"
+      ],
+      "forbiddenTopics": [
+        "自定义函数、指针、结构体、二维数组、排序算法（四级考点）"
+      ]
+    },
+    {
+      "level": 4,
+      "name": "GESP C++ 四级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 120,
+      "coreSummary": "函数的定义与调用、形参实参与作用域、值传递/引用传递/指针传递、指针基础、结构体、二维/多维数组、递推算法、冒泡/插入/选择排序、文件读写与异常处理。",
+      "allowedKnowledgeBlocks": [
+        "指针类型定义、赋值与解引用",
+        "二维及多维数组、结构体定义与使用",
+        "函数声明、定义、调用、作用域、值传递/引用传递/指针传递",
+        "递推算法思想与递推关系式",
+        "冒泡排序、插入排序、选择排序及简单时间/空间复杂度估算",
+        "文件重定向与读写操作、异常处理"
+      ],
+      "forbiddenTopics": [
+        "递归、二分查找、贪心、分治、快排/归并排序、高精度与链表（五级考点）"
+      ]
+    },
+    {
+      "level": 5,
+      "name": "GESP C++ 五级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 180,
+      "coreSummary": "初等数论(素数筛法/欧几里得gcd/唯一分解定理)、数组模拟高精度加减乘除、单/双/循环链表、二分查找/二分答案、递归、贪心算法、分治(归并/快排)。",
+      "allowedKnowledgeBlocks": [
+        "初等数论（素数合数、gcd/lcm、同余模运算、欧几里得算法、埃氏筛/线性筛）",
+        "C++ 数组模拟高精度加、减、乘、除",
+        "单链表、双链表、循环链表操作",
+        "二分查找与二分答案算法",
+        "递归算法、贪心算法、分治算法（归并排序、快速排序）"
+      ],
+      "forbiddenTopics": [
+        "树结构、DFS/BFS搜索、动态规划、栈与队列、面向对象类（六级考点）"
+      ]
+    },
+    {
+      "level": 6,
+      "name": "GESP C++ 六级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 180,
+      "coreSummary": "树与二叉树(哈夫曼树/完全二叉树/二叉排序树)、哈夫曼与格雷编码、DFS与BFS搜索、一维动态规划与简单背包、面向对象(类/封装/继承/多态)、栈与队列。",
+      "allowedKnowledgeBlocks": [
+        "树的基本概念、哈夫曼树、完全二叉树、二叉排序树、哈夫曼编码、格雷编码",
+        "深度优先搜索(DFS)、广度优先搜索(BFS)、二叉树搜索",
+        "一维动态规划与简单背包问题",
+        "面向对象思想、类的创建与继承/封装/多态",
+        "栈、队列、循环队列"
+      ],
+      "forbiddenTopics": [
+        "二维复杂动态规划、图论遍历与泛洪算法、哈希表（七级考点）"
+      ]
+    },
+    {
+      "level": 7,
+      "name": "GESP C++ 七级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 180,
+      "coreSummary": "数学库函数(sin/cos/log10/log2/exp)、复杂动态规划(二维DP/区间DP/LIS/LCS/滚动数组)、图的定义与DFS/BFS遍历、泛洪算法(flood fill)、哈希表。",
+      "allowedKnowledgeBlocks": [
+        "数学库函数（三角函数、对数函数、指数函数）",
+        "复杂动态规划（二维DP、区间DP、LIS、LCS、滚动数组空间优化）",
+        "图的定义、有向图/无向图、图的 DFS/BFS 遍历、泛洪算法（flood fill）",
+        "哈希表的概念与应用"
+      ],
+      "forbiddenTopics": [
+        "最小生成树(Kruskal/Prim)、最短路(Dijkstra/Floyd)、倍增法、排列组合与杨辉三角（八级考点）"
+      ]
+    },
+    {
+      "level": 8,
+      "name": "GESP C++ 八级",
+      "available": false,
+      "badgeText": "待上线",
+      "examDurationMinutes": 180,
+      "coreSummary": "计数原理(加法/乘法原理)、排列与组合、杨辉三角、倍增法、初中代数与平面几何、最小生成树(Kruskal/Prim)、最短路径(Dijkstra/Floyd)、算法效率分析与优化。",
+      "allowedKnowledgeBlocks": [
+        "加法原理、乘法原理、排列与组合、杨辉三角",
+        "倍增法",
+        "代数（一元一次/二元一次方程）与平面几何面积计算",
+        "图论综合（最小生成树 Kruskal/Prim、最短路径 Dijkstra/Floyd）",
+        "复杂算法时空效率分析与数学公式优化"
+      ],
+      "forbiddenTopics": []
+    }
+  ]
+}

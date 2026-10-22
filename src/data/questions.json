@@ -1,0 +1,183 @@
+[
+  {
+    "id": "gesp-l1-single-01",
+    "questionNo": "第 1 题",
+    "title": "C++ 算术运算符与整除",
+    "level": 1,
+    "type": "single",
+    "objectiveType": "single",
+    "score": 2,
+    "yearPrompt": "2024年3月 GESP C++ 一级单选真题",
+    "description": "执行以下 C++ 代码后，变量 `result` 的输出值是（ ）。",
+    "codeSnippet": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 14;\n    int b = 4;\n    int result = a / b + a % b;\n    cout << result << endl;\n    return 0;\n}",
+    "options": [
+      { "key": "A", "text": "5" },
+      { "key": "B", "text": "5.5" },
+      { "key": "C", "text": "6" },
+      { "key": "D", "text": "7" }
+    ],
+    "correctAnswer": "A",
+    "basicExplanation": "在 C++ 中，两个整型（int）相除执行的是整除运算，直接舍去小数部分。14 / 4 的商为 3；14 % 4 为求余数运算，结果为 2。因此 result = 3 + 2 = 5。选项 A 正确。",
+    "knowledgePoints": ["算术运算（除法与求余）", "整型变量与整除特性"],
+    "commonPitfalls": [
+      "误将 14 / 4 算作数学上的 3.5，得出 3.5 + 2 = 5.5 而误选 B",
+      "混淆 /（除法取商）与 %（求余数）两个运算符的作用",
+      "忘记 int 变量相除不会自动保留小数"
+    ],
+    "animationUrl": "/videos/gesp-l1-single-01.mp4",
+    "animationDesc": "可视化分步推演：演示 CPU 执行 a / b 整数截断过程与 a % b 求余过程，直观对比数学除法与 C++ 整数除法差异。"
+  },
+  {
+    "id": "gesp-l1-single-02",
+    "questionNo": "第 2 题",
+    "title": "变量自增运算与运算符优先级",
+    "level": 1,
+    "type": "single",
+    "objectiveType": "single",
+    "score": 2,
+    "yearPrompt": "2023年12月 GESP C++ 一级单选真题",
+    "description": "执行以下 C++ 代码片段后，输出的 `x` 和 `y` 的值分别是（ ）。",
+    "codeSnippet": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 5;\n    int y = (x++) * 2;\n    cout << x << \" \" << y << endl;\n    return 0;\n}",
+    "options": [
+      { "key": "A", "text": "5 10" },
+      { "key": "B", "text": "6 10" },
+      { "key": "C", "text": "6 12" },
+      { "key": "D", "text": "5 12" }
+    ],
+    "correctAnswer": "B",
+    "basicExplanation": "后置自增运算符 (x++) 是「先使用变量当前值参与运算，之后再使变量加 1」。计算 y 时，先取 x 的初始值 5 参与乘法运算，5 * 2 = 10，赋给 y；随后 x 自增变为 6。因此最终输出为 6 10。选项 B 正确。",
+    "knowledgePoints": ["变量自增运算（后置自增 ++）", "赋值与算术运算顺序"],
+    "commonPitfalls": [
+      "混淆前置自增 (++x) 与后置自增 (x++) 的区别，误以为 x 先变成 6 再乘 2 得到 12 而误选 C",
+      "忽略了 x 最终完成了自增变成了 6，误以为 x 仍是 5 而选 A"
+    ],
+    "animationUrl": "/videos/gesp-l1-single-02.mp4",
+    "animationDesc": "动画像素级解构：内存中变量 x 与 y 的时序状态转移，演示 (x++) 在表达式求值与变量落盘两个时间点的变化。"
+  },
+  {
+    "id": "gesp-l1-judge-01",
+    "questionNo": "第 3 题",
+    "title": "C++ 标识符命名规则判断",
+    "level": 1,
+    "type": "judge",
+    "objectiveType": "judge",
+    "score": 2,
+    "yearPrompt": "2024年6月 GESP C++ 一级判断真题",
+    "description": "在 C++ 语言中，变量名可以使用字母、数字和下划线组成，因此 `2024_score` 是一个合法的 C++ 变量名。",
+    "codeSnippet": "// 声明变量\nint 2024_score = 100;",
+    "options": [
+      { "key": "T", "text": "对（正确）" },
+      { "key": "F", "text": "错（错误）" }
+    ],
+    "correctAnswer": "F",
+    "basicExplanation": "C++ 标识符（包括变量名）只能由英文字母（大写或小写）、数字和下划线（_）组成，且【必须以字母或下划线开头，绝对不能以数字开头】。`2024_score` 以数字 '2' 开头，属于非法标识符，编译时会报错。因此本题说法错误。",
+    "knowledgePoints": ["程序基本概念（标识符命名规则）", "关键字与保留字约束"],
+    "commonPitfalls": [
+      "只记住了「由字母、数字、下划线组成」，忘记了「不能以数字开头」的硬性限制",
+      "以为加了下划线或包含字母就可以数字打头"
+    ],
+    "animationUrl": "/videos/gesp-l1-judge-01.mp4",
+    "animationDesc": "语法检查器模拟动画：编译器词法分析阶段识别 Token 时的报错逻辑，演示合法标识符 vs 非法以数字开头的标识符对比。"
+  },
+  {
+    "id": "gesp-l1-judge-02",
+    "questionNo": "第 4 题",
+    "title": "分支语句中赋值号与等号混淆判断",
+    "level": 1,
+    "type": "judge",
+    "objectiveType": "judge",
+    "score": 2,
+    "yearPrompt": "2023年9月 GESP C++ 一级判断真题",
+    "description": "在 C++ 语言中，条件判断语句 `if (a = 0)` 与 `if (a == 0)` 的执行逻辑与含义是完全等价的。",
+    "codeSnippet": "int a = 10;\n// 片段 1\nif (a = 0) {\n    cout << \"True\";\n}\n// 片段 2\nif (a == 0) {\n    cout << \"True\";\n}",
+    "options": [
+      { "key": "T", "text": "对（正确）" },
+      { "key": "F", "text": "错（错误）" }
+    ],
+    "correctAnswer": "F",
+    "basicExplanation": "`=` 是赋值运算符，`a = 0` 会将 a 赋值为 0，并且整个表达式的值为 0（在 C++ 中转换为布尔值 false），因此 `if (a = 0)` 分支永远不会执行；而 `==` 是关系等于判断运算符，`a == 0` 是检查当前 a 是否等于 0，不修改 a 的值。两者的作用和运行结果完全不同。因此本题说法错误。",
+    "knowledgePoints": ["赋值运算符 (=) 与关系运算符 (==) 的本质区别", "if 条件表达式的真假判定机制"],
+    "commonPitfalls": [
+      "将数学书写中的单个等于号习惯带入 C++，误以为单个等号也是在做等于比较",
+      "忽视了赋值表达式在 if 括号中存在返回值这一 C++ 特性"
+    ],
+    "animationUrl": "/videos/gesp-l1-judge-02.mp4",
+    "animationDesc": "动画像素级解构：清晰展示 `=`（往内存变量写值）与 `==`（读取两者对比产生 0/1）在底层的不同行为。"
+  },
+  {
+    "id": "gesp-l1-coding-01",
+    "questionNo": "第 5 题",
+    "title": "小明的苹果采购（分支与基本运算）",
+    "level": 1,
+    "type": "coding",
+    "score": 25,
+    "yearPrompt": "2024年3月 GESP C++ 一级编程真题第 1 题",
+    "description": "小明去超市买苹果，超市规定：每个苹果单价为 5 元。如果购买数量达到或超过 10 个，超市会给予总价打 9 折（即总价乘以 0.9）的优惠；若总价打折后不是整数，直接向下取整保留整数元。\n现在给出小明购买的苹果数量 $n$，请编写 C++ 程序计算小明最终应支付的总金额。",
+    "timeLimit": "1.0 秒",
+    "memoryLimit": "128.0 MB",
+    "inputFormat": "输入一行，包含一个正整数 $n$（$1 \\le n \\le 100$），表示购买的苹果数量。",
+    "outputFormat": "输出一行，包含一个整数，表示最终应支付的金额（元）。",
+    "samples": [
+      {
+        "input": "8",
+        "output": "40",
+        "explanation": "购买 8 个苹果，不足 10 个，不享受折扣：8 * 5 = 40 元。"
+      },
+      {
+        "input": "11",
+        "output": "49",
+        "explanation": "购买 11 个苹果，达到 10 个以上：原价 11 * 5 = 55 元，打 9 折为 55 * 0.9 = 49.5 元，向下取整后为 49 元。"
+      }
+    ],
+    "dataRange": "对于 100% 的数据，$1 \\le n \\le 100$。",
+    "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n    cin >> n;\n    // 请在此处编写你的 C++ 代码\n    \n    return 0;\n}",
+    "referenceCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n    if (!(cin >> n)) return 0;\n    int total = n * 5;\n    if (n >= 10) {\n        // 乘以 0.9 转为 double 后赋给 int 会自动截断小数向下取整\n        total = int(total * 0.9);\n    }\n    cout << total << endl;\n    return 0;\n}",
+    "basicExplanation": "本题考查基本的算术运算与 if-else 分支判断。原价为 n * 5。先判断数量 n 是否大于等于 10：如果满足，将原价乘以 0.9，利用 int 类型自动向下截断小数的特性取整；若不满足，直接输出原价即可。严禁使用数组或自定义函数（一级考纲内只在 main 中编写基本结构）。",
+    "knowledgePoints": ["分支结构（if-else）", "算术运算", "数据类型隐式截断（double 转 int）"],
+    "commonPitfalls": [
+      "条件误写成 `n > 10` 而漏掉了恰好买 10 个的边界优惠情况（题目要求达到或超过，即 `>= 10`）",
+      "变量类型未注意，使用整数除法 `total * 9 / 10` 导致提前整除产生精度误差，或未按照题目向下取整",
+      "输出多余的汉字提示（如输出了 `\"总金额: 40\"`），导致判题系统判定 WA"
+    ],
+    "animationUrl": "/videos/gesp-l1-coding-01.mp4",
+    "animationDesc": "算法流程动画：演示从 cin 读取数量、分支条件 `>= 10` 的真假流动路线、打折计算及整数截断过程。"
+  },
+  {
+    "id": "gesp-l1-coding-02",
+    "questionNo": "第 6 题",
+    "title": "区间内奇数与偶数的累加和（循环结构）",
+    "level": 1,
+    "type": "coding",
+    "score": 25,
+    "yearPrompt": "2024年6月 GESP C++ 一级编程真题第 2 题",
+    "description": "给出两个正整数 $L$ 和 $R$（$1 \\le L \\le R \\le 1000$）。请编写 C++ 程序，计算并输出闭区间 $[L, R]$ 内所有奇数的和，以及所有偶数的和。",
+    "timeLimit": "1.0 秒",
+    "memoryLimit": "128.0 MB",
+    "inputFormat": "输入一行，包含两个正整数 $L$ 和 $R$，中间以一个空格隔开。",
+    "outputFormat": "输出一行，包含两个整数，第一个数代表区间内所有奇数的累加和，第二个数代表所有偶数的累加和，两个数之间用一个空格隔开。",
+    "samples": [
+      {
+        "input": "1 5",
+        "output": "9 6",
+        "explanation": "区间 [1, 5] 内的奇数有 1、3、5，和为 1+3+5=9；偶数有 2、4，和为 2+4=6。输出 9 6。"
+      },
+      {
+        "input": "4 4",
+        "output": "0 4",
+        "explanation": "区间 [4, 4] 仅包含 4，奇数和为 0，偶数和为 4。输出 0 4。"
+      }
+    ],
+    "dataRange": "对于 100% 的数据，$1 \\le L \\le R \\le 1000$。",
+    "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int L, R;\n    cin >> L >> R;\n    // 请在此处编写你的 C++ 代码\n    \n    return 0;\n}",
+    "referenceCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int L, R;\n    if (!(cin >> L >> R)) return 0;\n    int oddSum = 0;\n    int evenSum = 0;\n    for (int i = L; i <= R; i++) {\n        if (i % 2 == 1) {\n            oddSum += i;\n        } else {\n            evenSum += i;\n        }\n    }\n    cout << oddSum << \" \" << evenSum << endl;\n    return 0;\n}",
+    "basicExplanation": "本题考查单层 for 循环与求余判断奇偶性。定义两个累加器 oddSum 和 evenSum，初值必须显式赋为 0。使用 for 循环从 L 遍历到 R（闭区间，必须包含 R 即 i <= R）。若 i % 2 != 0 则是奇数累加到 oddSum，否则累加到 evenSum。严格遵守 GESP 一级规范，不使用数组。",
+    "knowledgePoints": ["循环结构（for 循环）", "求余运算判断奇偶（i % 2）", "累加器初始化规范"],
+    "commonPitfalls": [
+      "累加变量未初始化为 0（如直接写 `int oddSum;`），在局部变量中会读入脏内存随机数导致求和暴增",
+      "循环条件写成 `i < R` 导致右边界 R 被遗漏未计算",
+      "输出格式错误：题目要求奇数和在前、偶数和在后，且以单个空格隔开，颠倒位置或换行输出都会判定 WA"
+    ],
+    "animationUrl": "/videos/gesp-l1-coding-02.mp4",
+    "animationDesc": "循环与指针滑动动画：高亮演示变量 i 从 L 一步步迭代到 R，通过 `% 2` 分流器将数值灌入奇数桶和偶数桶。"
+  }
+]
